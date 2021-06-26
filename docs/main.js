@@ -58,6 +58,16 @@ class Game {
         document
           .querySelector(`.board-tile[data-index='${c}']`)
           .classList.add("win");
+
+        document
+          .querySelector(`.board-tile[data-index='${a}']`)
+          .classList.remove("gris");
+        document
+          .querySelector(`.board-tile[data-index='${b}']`)
+          .classList.remove("gris");
+        document
+          .querySelector(`.board-tile[data-index='${c}']`)
+          .classList.remove("gris");
         return;
       }
       if (
@@ -79,6 +89,16 @@ class Game {
         document
           .querySelector(`.board-tile[data-index='${c}']`)
           .classList.add("win");
+
+        document
+          .querySelector(`.board-tile[data-index='${a}']`)
+          .classList.remove("gris");
+        document
+          .querySelector(`.board-tile[data-index='${b}']`)
+          .classList.remove("gris");
+        document
+          .querySelector(`.board-tile[data-index='${c}']`)
+          .classList.remove("gris");
         return;
       }
     }
@@ -147,6 +167,7 @@ document.querySelector(".restart").addEventListener("click", () => {
   gameView.update(game);
   tiles.forEach((tile) => {
     tile.classList.remove("win");
+    tile.classList.add("gris");
     tile.classList.remove("O");
     tile.classList.remove("X");
   });

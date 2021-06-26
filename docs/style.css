@@ -110,10 +110,6 @@ h1 {
   border-bottom: 3px solid rgba(137, 163, 189, 0.58);
 }
 
-.board-tile:hover {
-  background-color: #eee;
-}
-
 #jeux {
   margin-right: 50px;
   display: flex;
@@ -158,4 +154,8 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.gris:hover {
+  background-color: #eee;
 }
