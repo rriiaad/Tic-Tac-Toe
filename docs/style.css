@@ -145,3 +145,17 @@ h1 {
 .O {
   color: rgb(241, 53, 216);
 }
+
+.player-O > span {
+  font-family: "cascadia code";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-X > span {
+  font-family: "cascadia code";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

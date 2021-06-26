@@ -45,6 +45,9 @@ class Game {
         this.board[b] == "X"
       ) {
         this.win = true;
+        document.querySelector(".counterX").innerText = eval(
+          `${1}+${document.querySelector(".counterX").innerText}`
+        );
 
         document
           .querySelector(`.board-tile[data-index='${a}']`)
@@ -55,6 +58,7 @@ class Game {
         document
           .querySelector(`.board-tile[data-index='${c}']`)
           .classList.add("win");
+        return;
       }
       if (
         this.board[a] == "O" &&
@@ -62,6 +66,10 @@ class Game {
         this.board[b] == "O"
       ) {
         this.win = true;
+        document.querySelector(".counterO").innerText = eval(
+          `${1}+${document.querySelector(".counterO").innerText}`
+        );
+
         document
           .querySelector(`.board-tile[data-index='${a}']`)
           .classList.add("win");
@@ -71,6 +79,7 @@ class Game {
         document
           .querySelector(`.board-tile[data-index='${c}']`)
           .classList.add("win");
+        return;
       }
     }
   }
