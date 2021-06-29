@@ -158,7 +158,7 @@ tiles.forEach((tile) => {
 function onTileClick(i) {
   game.makeMove(i);
   gameView.update(game);
-  game.nextTurn(i);
+  game.nextTurn();
   gameView.display(game);
   gameView.color(game, i);
 }
