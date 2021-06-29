@@ -148,6 +148,9 @@ let tiles = Array.from(document.querySelectorAll(".board-tile"));
 
 tiles.forEach((tile) => {
   tile.addEventListener("click", () => {
+    if (tile.innerText === "X" || tile.innerText === "O") {
+      return;
+    }
     onTileClick(tiles.indexOf(tile));
   });
 });
@@ -155,7 +158,7 @@ tiles.forEach((tile) => {
 function onTileClick(i) {
   game.makeMove(i);
   gameView.update(game);
-  game.nextTurn();
+  game.nextTurn(i);
   gameView.display(game);
   gameView.color(game, i);
 }
